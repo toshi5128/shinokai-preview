@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>極真空手道 忍會 / REVIVE</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&display=swap">
+<link rel="stylesheet" href="site.css"><link rel="stylesheet" href="design.css">
+<script src="data.js" defer></script>
+<script src="site.js" defer></script>
+<script src="reveal.js" defer></script>
+<link rel="stylesheet" href="editorial.css"><link rel="stylesheet" href="opening.css">
+<script src="opening.js" defer></script>
+<link rel="icon" type="image/png" sizes="32x32" href="assets/shinobukai-favicon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/shinobukai-touch.png">
+<link rel="stylesheet" href="brand.css">
+</head>
+<body class="home-page">
+<header class="header">
+<a class="brand" href="#"><img class="brand-emblem" src="assets/shinobukai-emblem.png" alt="" width="44" height="44"><span class="brand-copy"><span class="brand-name">忍會 <span>/</span> REVIVE</span><small>極真空手道</small></span></a>
+<nav aria-label="メイン"><a href="#classes">クラス</a><a href="instructors.html">指導員</a><a href="events.html">お知らせ・大会</a><a href="dojos.html">道場案内</a></nav>
+<a class="button primary header-cta" href="#trial">体験・見学 <span aria-hidden="true">↗</span></a>
+</header>
+<main>
+<section class="hero" aria-labelledby="hero-title">
+<div class="hero-content">
+<p class="eyebrow">ふじみ野・上福岡の空手道場</p>
+<h1 id="hero-title"><span>極真空手道 忍會</span><strong><b>REVIVE</b></strong></h1>
+<p class="hero-copy">空手・キックボクシング</p>
+<a class="button primary" href="#trial">体験・見学のご案内 <span aria-hidden="true">↗</span></a>
+</div>
+<div class="opening-gallery">
+<div class="opening-stage" id="opening-stage">
+<figure class="opening-shot current" data-scene="coach">
+<div class="coach-cutout"><img class="opening-photo" src="assets/horikoshi-cutout.webp" alt="道着姿でトロフィーと盾を持つ堀越逸豊" fetchpriority="high" width="760" height="1412"></div>
+<figcaption><span>代表</span><strong>堀越 逸豊</strong><a href="instructors.html">指導員紹介 ↗</a></figcaption>
+</figure>
+<figure class="opening-shot" data-scene="practice" inert aria-hidden="true">
+<img class="opening-photo" src="assets/training.webp" alt="道場で行うミット稽古" width="385" height="435">
+<figcaption><span>稽古風景</span><strong>空手・キックボクシング</strong><a href="#classes">クラス案内 ↗</a></figcaption>
+</figure>
+<figure class="opening-shot" data-scene="cup" inert aria-hidden="true">
+<img class="opening-photo" src="assets/cup-2026.webp" alt="2026年の忍杯の会場で撮影された集合写真" width="800" height="533">
+<figcaption><span>2026年</span><strong>忍杯 全関東空手道選手権大会</strong><a href="events.html">大会ページ ↗</a></figcaption>
+</figure>
+</div>
+<div class="opening-controls" aria-label="忍會の写真を切り替える" hidden>
+<button type="button" aria-pressed="true" data-shot="coach" aria-controls="opening-stage"><img src="assets/horikoshi-cutout.webp" alt=""><span>指導員</span></button>
+<button type="button" aria-pressed="false" data-shot="practice" aria-controls="opening-stage"><img src="assets/training.webp" alt=""><span>稽古風景</span></button>
+<button type="button" aria-pressed="false" data-shot="cup" aria-controls="opening-stage"><img src="assets/cup-2026.webp" alt=""><span>忍杯</span></button>
+</div>
+</div>
+<a class="hero-scroll" href="#classes">稽古を知る <span aria-hidden="true">↓</span></a>
+</section>
+<div class="shortcuts">
+<a href="#classes">空手・キックボクシング <span aria-hidden="true">↗</span></a>
+<a href="schedule.html">稽古スケジュール <span aria-hidden="true">↗</span></a>
+<a href="events.html">忍杯・大会案内 <span aria-hidden="true">↗</span></a>
+</div>
+<section id="classes" class="section paper training">
+<div class="section-inner">
+<div class="section-heading" data-reveal><p class="eyebrow">TRAINING</p><h2>クラス案内</h2></div>
+<div class="training-layout"><div class="classes" data-reveal>
+<article><h3>極真空手</h3><p>幼年から一般まで。道場で、基本から一つずつ稽古を重ねます。</p></article>
+<article><h3>キックボクシング</h3><p>高校生から。クラスや参加方法は、体験の際にご相談ください。</p></article>
+</div><figure class="training-photo" data-reveal><img src="assets/training.webp" alt="道場でミットを使って稽古する様子" width="385" height="435" loading="lazy"><figcaption>道場での稽古風景</figcaption></figure></div>
+<a class="text-link" href="instructors.html">指導員を見る <span aria-hidden="true">↗</span></a>
+</div>
+</section>
+<section id="news" class="section">
+<div class="section-inner">
+<div class="section-heading" data-reveal><p class="eyebrow">NEWS &amp; EVENTS</p><h2>お知らせ・大会</h2></div>
+<div class="filters" data-reveal role="group" aria-label="記事を絞り込む">
+<button type="button" data-filter="すべて" aria-pressed="true">すべて</button>
+<button type="button" data-filter="大会案内" aria-pressed="false">大会案内</button>
+<button type="button" data-filter="大会結果" aria-pressed="false">大会結果</button>
+<button type="button" data-filter="お知らせ" aria-pressed="false">お知らせ</button>
+</div>
+<div id="news-list" class="news-list"></div>
+<a class="text-link" href="events.html">お知らせ・大会のページへ <span aria-hidden="true">↗</span></a>
+</div>
+</section>
+<section id="dojo" class="section paper">
+<div class="section-inner">
+<div class="section-heading" data-reveal><p class="eyebrow">DOJO</p><h2>道場案内</h2></div>
+<div class="dojo-grid" data-reveal>
+<a href="dojos.html#fujimino"><strong>ふじみ野本部</strong><span>営業日・稽古案内 ↗</span></a>
+<a href="dojos.html#kamifukuoka"><strong>上福岡教室</strong><span>稽古日を確認 ↗</span></a>
+<a href="dojos.html#higashimatsuyama"><strong>東松山道場</strong><span>道場案内 ↗</span></a>
+<a href="dojos.html#kumagaya"><strong>熊谷支部</strong><span>支部案内 ↗</span></a>
+</div>
+</div>
+</section>
+<section id="links" class="section paper links-section">
+<div class="section-inner"><div class="section-heading" data-reveal><p class="eyebrow">LINKS</p><h2>関連リンク</h2></div><div id="site-links" class="site-links" data-reveal></div></div>
+</section>
+<section id="trial" class="trial">
+<div class="section-inner" data-reveal>
+<p class="eyebrow">TRIAL</p><h2>まずは、道場へ。</h2>
+<p>体験・見学のお問い合わせは、道場へ直接ご連絡ください。</p>
+<div class="trial-actions"><a class="button light" href="tel:05035675224">電話で問い合わせる <span aria-hidden="true">↗</span></a><a class="text-link" href="https://shinobukai2019.amebaownd.com/" target="_blank" rel="noopener">現行サイトで確認 <span aria-hidden="true">↗</span></a></div>
+</div>
+</section>
+</main>
+<footer class="footer"><span>極真空手道 忍會 / REVIVE</span><a href="instructors.html">指導員</a><a href="schedule.html">稽古日程</a><a href="edit.html">更新画面を試す</a><small>合同会社VISIONによる確認用見本</small></footer>
+<dialog id="article" aria-labelledby="article-title"><div class="dialog-head"><span id="article-meta"></span><form method="dialog"><button class="close" aria-label="記事を閉じる">×</button></form></div><h2 id="article-title"></h2><p id="article-body"></p><div id="article-photos" class="article-photos"></div><div id="article-links" class="site-links"></div></dialog>
+</body>
+</html>

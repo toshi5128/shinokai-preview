@@ -1,0 +1,77 @@
+.header nav a[aria-current="page"], .local-nav a[aria-current="page"] { color: #ff8193; }
+.local-nav { display: none; }
+.subhero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  min-height: clamp(220px, 32vw, 380px);
+  display: grid;
+  align-items: end;
+  border-bottom: 2px solid var(--accent-line);
+  background: #161519;
+}
+.subhero::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: -60% -16% -100% 63%;
+  background: linear-gradient(100deg, #741727, #26181d 73%);
+  transform: skewX(-23deg);
+  opacity: .82;
+}
+.subhero .section-inner { padding-block: clamp(38px, 7vw, 82px); animation: text-in .75s ease both; }
+.subhero-label {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  color: #ff8998;
+  font: 700 clamp(16px, 2.3vw, 23px)/1.1 var(--display);
+  letter-spacing: .115em;
+}
+.subhero-label::before { content: ""; width: 26px; height: 2px; background: currentColor; }
+.subhero h1 { font-size: clamp(36px, 7.5vw, 86px); line-height: 1.13; font-weight: 900; letter-spacing: -.055em; margin-top: 10px; }
+.subhero-intro { font-size: clamp(13px, 2vw, 16px); margin-top: 12px; color: #e5dfe0; }
+.inner-section { padding-block: clamp(32px, 7vw, 90px); }
+.coach-list { display: grid; gap: clamp(24px, 5vw, 56px); }
+.coach { display: grid; grid-template-columns: minmax(0, .88fr) minmax(0, 1.12fr); align-items: center; background: #fcfaf5; border: 1px solid #d3cec5; }
+.coach-image { margin: 0; height: 100%; overflow: hidden; background: #383239; }
+.coach-image img { width: 100%; height: 100%; min-height: 390px; max-height: 540px; object-fit: cover; object-position: center 15%; }
+.coach-copy { padding: clamp(24px, 5vw, 64px); }
+.role { color: #9d172b; font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: .12em; }
+.coach-copy h2, .branch h2 { font-size: clamp(27px, 4vw, 51px); line-height: 1.2; font-weight: 900; margin: 7px 0 13px; letter-spacing: -.045em; }
+.coach-copy > p:not(.role), .branch > p:not(.role), .guide-note { color: #47414a; font-size: 14px; }
+.coach-copy h3 { border-top: 1px solid #cfc9be; margin-top: 25px; padding-top: 16px; font-size: 14px; }
+.coach-copy ul { margin: 8px 0 0; padding-left: 19px; font-size: 14px; }
+.coach-copy li::marker { color: #a32036; }
+.coach-list > .text-link, .branch .text-link { justify-self: start; }
+.calendar-callout {
+  display: flex;
+  gap: 16px 32px;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: clamp(21px, 4vw, 48px);
+  background: #fcfaf5;
+  border: 1px solid #d3cec5;
+  border-left: 3px solid var(--accent-line);
+}
+.calendar-callout h2 { font-size: clamp(21px, 3vw, 32px); font-weight: 900; }
+.calendar-callout p, .schedule-list p { margin-top: 7px; font-size: 14px; color: #47414a; }
+.schedule-list, .branch-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 18px; }
+.schedule-list { margin-block: clamp(22px, 4vw, 40px); }
+.schedule-list article, .branch { background: #fcfaf5; border: 1px solid #d3cec5; border-top: 2px solid var(--accent-line); padding: clamp(19px, 3.5vw, 38px); }
+.schedule-list h3 { font-size: clamp(19px, 2.7vw, 28px); }
+.schedule-list strong { display: block; margin-top: 8px; font-size: 15px; }
+.schedule-list strong span { font: 700 clamp(24px, 4.5vw, 42px)/1 var(--display); margin-left: 6px; white-space: nowrap; }
+.branch { scroll-margin-top: 91px; }
+.branch h2 { font-size: clamp(25px, 3.8vw, 46px); }
+.branch .text-link { margin-right: 15px; }
+.inner-page #news { padding-top: clamp(37px, 6vw, 78px); }
+@media (max-width: 700px) {
+  .local-nav { display: flex; flex-wrap: wrap; gap: 2px 14px; padding: 11px 20px; background: #201e23; font-size: 12px; font-weight: 680; }
+  .local-nav a { display: inline-flex; min-height: 34px; align-items: center; }
+  .local-nav a[aria-current="page"] { border-bottom: 1px solid currentColor; }
+  .coach, .schedule-list, .branch-grid { grid-template-columns: 1fr; }
+  .coach-image img { min-height: 0; height: auto; aspect-ratio: 1 / 1.04; object-position: center 12%; }
+  .coach-copy h2 { font-size: clamp(28px,8vw,41px); }
+}

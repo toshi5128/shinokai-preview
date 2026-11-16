@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>忍會 / REVIVE｜更新画面の見本</title>
+<link rel="stylesheet" href="site.css">
+<script src="data.js" defer></script>
+<script src="edit.js" defer></script>
+<link rel="icon" type="image/png" sizes="32x32" href="assets/shinobukai-favicon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/shinobukai-touch.png">
+<link rel="stylesheet" href="brand.css">
+</head>
+<body class="editor">
+<header class="edit-header"><strong class="editor-brand"><img class="brand-emblem" src="assets/shinobukai-emblem.png" alt="" width="39" height="39">忍會 / REVIVE</strong><a href="./">サイトを見る ↗</a></header>
+<main class="edit-main">
+<h1>道場サイトの更新</h1>
+<p class="edit-hint">ここでの変更はこのブラウザに保存されます。確認用サイトで表示を試せます。</p>
+<div class="edit-switch" role="group" aria-label="更新の種類"><button type="button" id="post-mode" aria-pressed="true">お知らせ・大会</button><button type="button" id="link-mode" aria-pressed="false">関連リンク</button></div>
+<form id="post-form">
+<h2 id="post-heading">記事を追加</h2>
+<label>種類<select id="category"><option>お知らせ</option><option>大会案内</option><option>大会結果</option></select></label>
+<label>タイトル<input id="post-title" required maxlength="100" placeholder="例：忍杯 大会のお知らせ"></label>
+<label>大会日・掲載日<input id="post-date" type="date" required></label>
+<label>内容<textarea id="post-body" rows="5" placeholder="集合場所、申込み方法など"></textarea></label>
+<div class="field-heading">写真 <span id="photo-count">複数選択できます</span></div>
+<label class="file">写真を選ぶ<input type="file" id="post-photos" accept="image/*" multiple></label>
+<div id="photo-list" class="photo-list"></div>
+<div class="field-heading">記事のリンク</div>
+<div id="post-links"></div>
+<button type="button" id="add-post-link" class="secondary">＋ リンクを追加</button>
+<div class="edit-actions"><button class="button primary" type="submit">保存して反映</button><button class="secondary" type="button" id="reset-post">新規入力に戻る</button></div>
+<p id="post-result" class="edit-result" role="status"></p>
+</form>
+<section id="post-management" aria-label="保存した記事"><h2>このブラウザで追加した記事</h2><div id="saved-posts"></div></section>
+<form id="link-form" hidden>
+<h2 id="link-heading">関連リンクを追加</h2>
+<label>表示名<input id="link-label" required maxlength="64" placeholder="例：大会の申込み"></label>
+<label>URL<input id="link-url" type="url" placeholder="https://…" required></label>
+<div class="edit-actions"><button class="button primary" type="submit">保存して反映</button><button class="secondary" id="reset-link" type="button">新規入力に戻る</button></div>
+<p id="link-result" class="edit-result" role="status"></p>
+</form>
+<section id="link-management" aria-label="保存したリンク" hidden><h2>このブラウザで追加したリンク</h2><div id="saved-links"></div></section>
+<template id="link-input"><div class="link-input"><label>表示名<input class="related-label" maxlength="70" placeholder="大会要項"></label><label>URL<input class="related-url" type="url" placeholder="https://…"></label><button type="button" class="secondary remove-link" aria-label="このリンク欄を外す">×</button></div></template>
+</main>
+</body>
+</html>
