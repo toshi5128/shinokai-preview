@@ -12,17 +12,13 @@
 }
 .brand-name { font-weight: 850; letter-spacing: -.06em; }
 .header nav { font-size: 13px; }
-.header-cta, .hero .primary, .trial .button { clip-path: none; }
+.header-cta, .hero .primary { clip-path: none; }
 .header-cta { background: transparent; border: 1px solid #b85763; }
 .header-cta:hover { background: var(--red); border-color: var(--red); }
 .section-inner { width: min(calc(100% - var(--edge) * 2), 1200px); }
 .section-heading { position: relative; }
-.section-heading h2, .subhero h1 { letter-spacing: -.065em; }
-.section-heading .eyebrow, .trial .eyebrow {
-  font: 700 17px/1 var(--display);
-  letter-spacing: .14em;
-}
-.section-heading .eyebrow::before, .trial .eyebrow::before, .subhero-label::before {
+.section-heading h2, .dojo-directory h2, .subhero h1 { letter-spacing: -.065em; }
+.subhero-label::before {
   width: 18px;
   height: 1px;
 }
@@ -80,22 +76,18 @@
   padding-inline: clamp(10px, 3vw, 44px);
 }
 .shortcuts a:last-child { border-right: 1px solid var(--line); }
-.shortcuts a span { color: #ff8393; }
 .training-photo { border-bottom: 3px solid var(--red); }
 .training-photo img { filter: saturate(.81) contrast(1.05); aspect-ratio: 1.35; }
 .classes article { padding-block: clamp(16px, 2.3vw, 31px); }
 .classes h3 { letter-spacing: -.035em; }
-#news .section-heading .eyebrow { color: #ff8393; }
 .news-item { min-height: 68px; }
 .filters button[aria-pressed="true"] { background: var(--red); color: var(--white); border-color: var(--red); }
-.dojo-grid a, .links-section .site-links a, .branch, .schedule-list article {
+.branch, .schedule-list article {
   border: 1px solid #d4d0c9;
   border-left: 2px solid var(--red);
   background: var(--white);
 }
 .trial { background: #191a1c; border-top: 3px solid var(--red); }
-.trial::after { display: none; }
-.trial .eyebrow { color: #ff8393; }
 
 .subhero { background: var(--ink); border-bottom-width: 1px; }
 .subhero::after {
@@ -207,4 +199,53 @@
 .page-instructors .portrait-long img { height: 116%; }
 @media (max-width: 700px) {
   .page-instructors .subhero::before { inset: -23% -8% -23% 47%; opacity: .26; }
+}
+
+.dojo-directory {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.7fr);
+  align-items: start;
+  gap: clamp(24px, 5vw, 70px);
+}
+.dojo-list, .related-links { margin: 0; padding: 0; list-style: none; }
+.dojo-list li { border-bottom: 1px solid #cbc6bd; }
+.dojo-list li:first-child { border-top: 1px solid #cbc6bd; }
+.dojo-list a {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0 18px;
+  padding: clamp(15px, 2vw, 25px) 2px;
+}
+.dojo-list strong { font-size: clamp(19px, 2.5vw, 30px); }
+.dojo-list span { font-size: 13px; color: #59534d; }
+.dojo-list a:hover strong, .related-links a:hover { color: #9c192c; }
+.dojo-list a:hover strong, .related-links a span:first-child { text-decoration: underline; text-underline-offset: .24em; }
+
+.links-section { padding-block: clamp(24px, 4vw, 52px); background: #e9e5dd; }
+.links-section .section-inner { display: grid; gap: 12px; }
+.links-section h2 { font-size: 18px; }
+.related-links { display: flex; flex-wrap: wrap; gap: 0 clamp(20px, 4vw, 46px); }
+.related-links li { max-width: 100%; }
+.related-links a, .site-links a { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; }
+.related-links a { min-height: 44px; align-items: center; font-size: 14px; overflow-wrap: anywhere; }
+.external-icon { flex: none; opacity: .7; font-size: .9em; }
+
+.trial-layout { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 28px 36px; }
+.trial h2 { font-size: clamp(26px, 4.1vw, 50px); }
+.trial p { margin-top: 12px; font-size: 14px; color: #e5dfdb; }
+.trial .text-link { margin-top: 8px; }
+.trial-phone {
+  display: grid;
+  background: var(--white);
+  color: var(--ink);
+  padding: 15px clamp(18px, 3vw, 35px);
+  transition: background .2s ease;
+}
+.trial-phone:hover { background: #ffe9ec; }
+.trial-phone span { font-size: 13px; font-weight: 650; }
+.trial-phone strong { font-size: clamp(23px, 3vw, 36px); font-variant-numeric: tabular-nums; line-height: 1.35; }
+@media (max-width: 700px) {
+  .dojo-directory { grid-template-columns: 1fr; }
 }

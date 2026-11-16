@@ -44,7 +44,7 @@ function renderNews() {
     button.setAttribute("aria-haspopup", "dialog");
     const date = textElement("time", post.date.replaceAll("-", "."));
     date.dateTime = post.date;
-    const arrow = textElement("span", "↗", "arrow");
+    const arrow = textElement("span", "›", "arrow");
     arrow.setAttribute("aria-hidden", "true");
     button.append(date, textElement("span", post.category, "category"), textElement("strong", post.title), arrow);
     button.addEventListener("click", () => showArticle(post));
@@ -67,7 +67,12 @@ async function renderSite() {
   ]);
   posts = [...customPosts, ...starterPosts].sort((a, b) => b.date.localeCompare(a.date));
   renderNews();
-  document.querySelector("#site-links")?.replaceChildren(...[...starterLinks, ...customLinks].map(externalLink));
+  const linkList = document.querySelector("#site-links");
+  linkList?.replaceChildren(...[...starterLinks, ...customLinks].map(link => {
+    const item = document.createElement("li");
+    item.append(externalLink(link));
+    return item;
+  }));
 }
 renderSite();
 addEventListener("pageshow", event => { if (event.persisted) renderSite(); });

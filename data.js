@@ -87,7 +87,10 @@ function textElement(tag, value, className) {
 }
 
 function externalLink(item) {
-  const anchor = textElement("a", item.label + " ↗");
+  const anchor = document.createElement("a");
+  const icon = textElement("span", "↗", "external-icon");
+  icon.setAttribute("aria-hidden", "true");
+  anchor.append(textElement("span", item.label), icon);
   anchor.href = webAddress(item.url);
   anchor.target = "_blank";
   anchor.rel = "noopener noreferrer";
